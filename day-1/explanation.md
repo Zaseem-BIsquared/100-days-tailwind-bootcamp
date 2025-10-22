@@ -95,7 +95,7 @@ You can find it on this `div`:
 However, since the goal here is to remove unnecessary classes and fix issues, the simplest and most effective solution is to **remove `focus:outline-none`**. This will restore the browser's default, highly visible focus indicator, immediately making the dropdown menu accessible to keyboard users.
 
 ### **User**
-instead of putting them directly, ue the li and add then anchor tag inside the li, and for the email_id, don't use the a tag
+Instead of putting the anchor tag directly on the dropdown-menu, use the li and add then anchor tag inside the li, and for the email_id, don't use the anchor tag
 
 ### **Gemini**
 Of course. I'll restructure the dropdown menu as you requested. Here is the plan:

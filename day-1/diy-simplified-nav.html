@@ -52,20 +52,20 @@
     </nav>
 
     <script>
-      const userMenuButton = document.getElementById("user-menu-button");
-      const userMenu = document.getElementById("user-menu");
+      const userMenuButton = document.getElementById('user-menu-button');
+      const userMenu = document.getElementById('user-menu');
 
-      userMenuButton.addEventListener("click", () => {
-        userMenu.classList.toggle("hidden");
+      userMenuButton.addEventListener('click', () => {
+        userMenu.classList.toggle('hidden');
       });
 
       // Close the dropdown if the user clicks outside of it
-      window.addEventListener("click", function (e) {
+      window.addEventListener('click', function (e) {
         if (
           !userMenuButton.contains(e.target) &&
           !userMenu.contains(e.target)
         ) {
-          userMenu.classList.add("hidden");
+          userMenu.classList.add('hidden');
         }
       });
     </script>

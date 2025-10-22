@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplified Navbar</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+  </head>
 
-<body class="bg-gray-100">
-
+  <body class="bg-gray-100">
     <nav class="bg-gray-800 text-white">
-        <div class="px-4">
-            <div class="relative flex h-16 items-center justify-between">
-                <!-- Brand -->
-                <div class="flex items-center">
-                    <a href="#" class="text-xl px-3 py-1 rounded-sm hover:bg-gray-700">Calmdo</a>
-                </div>
+      <div class="px-4">
+        <div class="relative flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <div class="flex items-center">
+            <a href="#" class="text-xl px-3 py-1 rounded-sm hover:bg-gray-700"
+              >Calmdo</a
+            >
+          </div>
 
-                <!-- Profile Dropdown -->
-                <div class="relative ml-3">
-                    <div class="hover:bg-gray-700 rounded-md p-1">
-                        <button type="button" id="user-menu-button"
-                            class="relative flex items-center focus:bg-gray-700">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">Open user menu</span>
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500">
-                                <span class="font-medium text-white text-sm">Z</span>
-                            </div>
-                            <span class="ml-2 text-sm ">zaseem@bisquared.com</span>
-                        </button>
-                    </div>
-
-                    <ul id="user-menu"
-                        class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white p-2 shadow-lg focus:outline-none hidden"
-                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                        <li>
-                            <div class="block px-4 py-2 text-sm text-gray-400">zaseem@bisquared.com</div>
-                        </li>
-                        <li class="hover:bg-gray-100 rounded-md">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 " role="menuitem"
-                                tabindex="-1">Settings</a>
-                        </li>
-                        <li class="hover:bg-gray-100 rounded-md">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">log
-                                out</a>
-                        </li>
-                    </ul>
+          <!-- Profile Dropdown -->
+          <div class="relative ml-3">
+            <div class="hover:bg-gray-700 rounded-md p-1">
+              <button
+                type="button"
+                id="user-menu-button"
+                class="relative flex items-center focus:bg-gray-700"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+                <div
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500"
+                >
+                  <span class="font-medium text-white text-sm">Z</span>
                 </div>
+                <span class="ml-2 text-sm">zaseem@bisquared.com</span>
+              </button>
             </div>
+
+            <ul
+              id="user-menu"
+              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white p-2 shadow-lg focus:outline-none hidden"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu-button"
+              tabindex="-1"
+            >
+              <li>
+                <div class="block px-4 py-2 text-sm text-gray-400">
+                  zaseem@bisquared.com
+                </div>
+              </li>
+              <li class="hover:bg-gray-100 rounded-md">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  >Settings</a
+                >
+              </li>
+              <li class="hover:bg-gray-100 rounded-md">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  >log out</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
 
     <script>
-        const userMenuButton = document.getElementById('user-menu-button');
-        const userMenu = document.getElementById('user-menu');
+      const userMenuButton = document.getElementById('user-menu-button');
+      const userMenu = document.getElementById('user-menu');
 
-        userMenuButton.addEventListener('click', () => {
-            userMenu.classList.toggle('hidden');
-        });
+      userMenuButton.addEventListener('click', () => {
+        userMenu.classList.toggle('hidden');
+      });
 
-        // Close the dropdown if the user clicks outside of it
-        window.addEventListener('click', function (e) {
-            if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
-                userMenu.classList.add('hidden');
-            }
-        });
+      // Close the dropdown if the user clicks outside of it
+      window.addEventListener('click', function (e) {
+        if (
+          !userMenuButton.contains(e.target) &&
+          !userMenu.contains(e.target)
+        ) {
+          userMenu.classList.add('hidden');
+        }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

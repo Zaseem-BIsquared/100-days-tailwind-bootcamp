@@ -18,6 +18,8 @@ defmodule TailwindBootcampWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    get "/navbar", NavBarController, :index
   end
 
   # Other scopes may use custom stacks.

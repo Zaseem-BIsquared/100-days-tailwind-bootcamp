@@ -20,6 +20,7 @@ defmodule TailwindBootcampWeb.Router do
     get "/", PageController, :home
 
     get "/navbar", NavBarController, :index
+    get "/dummy", NavBarController, :dummy
   end
 
   # Other scopes may use custom stacks.

@@ -4,4 +4,8 @@ defmodule TailwindBootcampWeb.NavBarController do
   def index(conn, _param) do
     render(conn)
   end
+
+  def dummy(conn, _param) do
+    render(conn)
+  end
 end
